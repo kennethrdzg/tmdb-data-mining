@@ -11,4 +11,4 @@ Proyecto de Minería de datos que analiza un dataset de películas para extraer 
 - [x] Predicciones
 - [x] Clasificación
 - [x] Clustering
-- [ ] Análisis de texto
+- [x] Análisis de texto
