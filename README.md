@@ -3,10 +3,10 @@ Proyecto de Minería de datos que analiza un dataset de películas para extraer 
 
 **Dataset**: [Top 10000 popular Movies TMDB](https://www.kaggle.com/datasets/ursmaheshj/top-10000-popular-movies-tmdb-05-2023)
 
-- [ ] Limpieza de datos
-- [ ] Análisis
-- [ ] Visualización
-- [ ] Pruebas estadísticas
+- [x] Limpieza de datos
+- [x] Análisis
+- [x] Visualización
+- [x] Pruebas estadísticas
 - [ ] Regresión lineal
 - [ ] Predicciones
 - [ ] Clasificación

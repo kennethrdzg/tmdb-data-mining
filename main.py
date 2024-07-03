@@ -5,6 +5,7 @@ import pandas as pd
 from lib.cleaning import clean_data
 from lib.analysis import analyze
 from lib.visualization import visualize
+from lib.statistic_test import stat_test
 
 if __name__=="__main__": 
     dataset = "top_10000_popular_movies_tmdb.csv"
@@ -24,4 +25,7 @@ if __name__=="__main__":
 
     print("Visualización:")
     visualize(f'dataset/{final_dataset}', False)
+    print("-"*40)
 
+    print("Prueba estadística")
+    stat_test(f'dataset/{final_dataset}')
