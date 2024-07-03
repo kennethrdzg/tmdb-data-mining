@@ -1,6 +1,4 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-from collections import Counter
 
 def print_buffer(): 
     print("-"*20)
