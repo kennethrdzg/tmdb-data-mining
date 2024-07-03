@@ -2,13 +2,13 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def graph_output(img_path: str, showing = True): 
+def graph_output(img_path: str, showing): 
     if showing: 
         plt.show()
     else: 
         plt.savefig(img_path)
 
-def visualize(dataset, showing = True): 
+def visualize(dataset, showing = False): 
     img_path = 'img/graphs'
     if not os.path.exists("img"): 
         os.mkdir("img")
