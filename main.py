@@ -17,24 +17,29 @@ if __name__=="__main__":
         print("No existe el dataset requerido")
         exit()
 
-    print("Limpieza de datos")    
-    clean_data(f'dataset/{dataset}', f'dataset/{final_dataset}')
-    print("-"*40)
+    df: pd.DataFrame = None
+
+    if os.path.exists(f'dataset/{final_dataset}'): 
+        df = pd.read_csv(f'dataset/{final_dataset}')
+    else: 
+        print("Limpieza de datos")    
+        df = clean_data(f'dataset/{dataset}', f'dataset/{final_dataset}')
+        print("-"*40)
 
     print("Análisis de Datos:")
-    analyze(f'dataset/{final_dataset}')
+    analyze(df)
     print("-"*40)
 
     print("Visualización:")
-    visualize(f'dataset/{final_dataset}', False)
+    visualize(df)
     print("-"*40)
 
     print("Tabla ANOVA")
-    stat_test(f'dataset/{final_dataset}')
+    stat_test(df)
     print("-"*40)
 
     print("Regresión lineal")
-    get_linear_regression(f'dataset/{final_dataset}')
+    get_linear_regression(df)
 
     print("Predicción")
-    forecast(f'dataset/{final_dataset}')
+    forecast(df)

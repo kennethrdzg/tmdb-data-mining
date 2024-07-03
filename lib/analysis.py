@@ -3,9 +3,7 @@ import pandas as pd
 def print_buffer(): 
     print("-"*20)
 
-def analyze(dataset: str): 
-    df: pd.DataFrame = pd.read_csv(dataset)
-
+def analyze(df: pd.DataFrame): 
     result = df['genres'].aggregate('count')
 
     # print("Combinaciones distintas de géneros: ", result)

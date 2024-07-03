@@ -8,14 +8,12 @@ def graph_output(img_path: str, showing):
     else: 
         plt.savefig(img_path)
 
-def visualize(dataset, showing = False): 
+def visualize(df: pd.DataFrame, showing = False): 
     img_path = 'img/graphs'
     if not os.path.exists("img"): 
         os.mkdir("img")
     if not os.path.exists("img/graphs"): 
         os.mkdir("img/graphs")
-
-    df: pd.DataFrame = pd.read_csv(dataset)
 
     result = df.groupby('release_year')['id'].aggregate('count')
     result.plot(kind='line', xlabel='Año de lanzamiento', ylabel='Cantidad de películas', title='Películas más populares')

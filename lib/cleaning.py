@@ -22,3 +22,4 @@ def clean_data(input_filename: str, output_filename: str)->pd.DataFrame:
     print("Generando dataset/popular_movies.csv")
     df.to_csv(output_filename)
     print("Limpieza concluida.")
+    return df

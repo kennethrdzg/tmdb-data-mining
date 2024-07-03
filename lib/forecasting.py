@@ -43,8 +43,7 @@ def plt_lr(df: pd.DataFrame, x: str, y: str, m: float, b: float, r2: float, r2_a
     plt.plot(df[x], [m * x + b for _, x in fixed_x.items()], color=colors[0])
     plt.fill_between(df[x], [m * x + low_band for _, x in fixed_x.items()], [m * x + hi_band for _, x in fixed_x.items()], alpha=0.2, color=colors[1])
 
-def forecast(dataset: str, showing = False): 
-    df = pd.read_csv(dataset)
+def forecast(df: pd.DataFrame, showing = False): 
     df['release_date'] = pd.to_datetime(df['release_date'])
 
     df_by_revenue = df.groupby('release_date')['revenue'].mean().reset_index()

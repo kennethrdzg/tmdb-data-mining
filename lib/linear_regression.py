@@ -33,8 +33,7 @@ def regress_line(df: pd.DataFrame, x_axis: str, y_axis: str, agg_func = '', show
     else: 
         plt.savefig(f'{img_path}/{x_axis.lower()}_vs_{y_axis.lower()}.png')
 
-def get_linear_regression(dataset: str, showing = False): 
-    df: pd.DataFrame = pd.read_csv(dataset)
+def get_linear_regression(df: pd.DataFrame, showing = False): 
     if not showing: 
         print("Generando gráficas...")
     regress_line(df, x_axis='release_year', y_axis='id', agg_func='count', showing=showing)
