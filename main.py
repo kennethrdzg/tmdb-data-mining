@@ -8,6 +8,7 @@ from lib.visualization import visualize
 from lib.statistic_test import stat_test
 from lib.linear_regression import get_linear_regression
 from lib.forecasting import forecast
+from lib.classification import classify
 
 if __name__=="__main__": 
     dataset = "top_10000_popular_movies_tmdb.csv"
@@ -43,3 +44,6 @@ if __name__=="__main__":
 
     print("Predicción")
     forecast(df)
+
+    print("Clasificación")
+    classify(df)
