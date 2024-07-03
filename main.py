@@ -7,6 +7,7 @@ from lib.analysis import analyze
 from lib.visualization import visualize
 from lib.statistic_test import stat_test
 from lib.linear_regression import get_linear_regression
+from lib.forecasting import forecast
 
 if __name__=="__main__": 
     dataset = "top_10000_popular_movies_tmdb.csv"
@@ -34,3 +35,6 @@ if __name__=="__main__":
 
     print("Regresión lineal")
     get_linear_regression(f'dataset/{final_dataset}')
+
+    print("Predicción")
+    forecast(f'dataset/{final_dataset}')
