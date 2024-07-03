@@ -9,11 +9,11 @@ def graph_output(img_path: str, showing = True):
         plt.savefig(img_path)
 
 def visualize(dataset, showing = True): 
-    img_path = '../img/graphs'
-    if not os.path.exists("../img"): 
-        os.mkdir("../img")
-    elif not os.path.exists("../img/graphs"): 
-        os.mkdir("../img/graphs")
+    img_path = 'img/graphs'
+    if not os.path.exists("img"): 
+        os.mkdir("img")
+    if not os.path.exists("img/graphs"): 
+        os.mkdir("img/graphs")
 
     df: pd.DataFrame = pd.read_csv(dataset)
 
@@ -23,7 +23,7 @@ def visualize(dataset, showing = True):
 
     plt.cla()
 
-    result = pd.read_csv('../dataset/movies_by_genre.csv')
+    result = pd.read_csv('dataset/movies_by_genre.csv')
     result = result.groupby('genres')['count'].aggregate('sum')
     result.plot(kind='bar', ylabel='Películas', xlabel='Géneros', title='Películas por Género')
     graph_output(f"{img_path}/movies_by_genre.png", showing)

@@ -75,4 +75,4 @@ def analyze(dataset: str):
     }
     new_df = pd.DataFrame(new_df)
     new_df = new_df.groupby('genres')['count'].aggregate('sum')
-    new_df.to_csv(f'../dataset/movies_by_genre.csv')
+    new_df.to_csv(f'dataset/movies_by_genre.csv')
