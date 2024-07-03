@@ -2,7 +2,7 @@
 import os
 import pandas as pd
 
-from lib.data_cleaning import clean_data
+from lib.cleaning import clean_data
 
 if __name__=="__main__": 
     dataset = "top_10000_popular_movies_tmdb.csv"
