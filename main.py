@@ -6,6 +6,7 @@ from lib.cleaning import clean_data
 from lib.analysis import analyze
 from lib.visualization import visualize
 from lib.statistic_test import stat_test
+from lib.linear_regression import get_linear_regression
 
 if __name__=="__main__": 
     dataset = "top_10000_popular_movies_tmdb.csv"
@@ -27,5 +28,9 @@ if __name__=="__main__":
     visualize(f'dataset/{final_dataset}', False)
     print("-"*40)
 
-    print("Prueba estadística")
+    print("Tabla ANOVA")
     stat_test(f'dataset/{final_dataset}')
+    print("-"*40)
+
+    print("Regresión lineal")
+    get_linear_regression(f'dataset/{final_dataset}')

@@ -7,7 +7,7 @@ Proyecto de Minería de datos que analiza un dataset de películas para extraer 
 - [x] Análisis
 - [x] Visualización
 - [x] Pruebas estadísticas
-- [ ] Regresión lineal
+- [x] Regresión lineal
 - [ ] Predicciones
 - [ ] Clasificación
 - [ ] Clustering
