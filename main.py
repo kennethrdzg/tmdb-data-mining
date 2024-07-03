@@ -9,6 +9,7 @@ from lib.statistic_test import stat_test
 from lib.linear_regression import get_linear_regression
 from lib.forecasting import forecast
 from lib.classification import classify
+from lib.clustering import cluster
 
 if __name__=="__main__": 
     dataset = "top_10000_popular_movies_tmdb.csv"
@@ -47,3 +48,5 @@ if __name__=="__main__":
 
     print("Clasificación")
     classify(df)
+    print("Clustering")
+    cluster(df)
