@@ -8,6 +8,9 @@ from lib.visualization import visualize
 from lib.statistic_test import stat_test
 from lib.linear_regression import get_linear_regression
 from lib.forecasting import forecast
+from lib.classification import classify
+from lib.clustering import cluster
+from lib.text_analysis import analyze_text
 
 if __name__=="__main__": 
     dataset = "top_10000_popular_movies_tmdb.csv"
@@ -43,3 +46,10 @@ if __name__=="__main__":
 
     print("Predicción")
     forecast(df)
+
+    print("Clasificación")
+    classify(df)
+    print("Clustering")
+    cluster(df)
+    print("Análisis de texto")
+    analyze_text(df)
