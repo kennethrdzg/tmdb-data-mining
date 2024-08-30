@@ -6,6 +6,7 @@ def clean_data(input_filename: str, output_filename: str)->pd.DataFrame:
     print("Limpiando datos...")
     df = df.dropna()
     df = df.drop_duplicates()
+    df = df.drop('index', axis=1)
     release_year = []
     release_month = []
     for x in df.index: 
@@ -20,6 +21,6 @@ def clean_data(input_filename: str, output_filename: str)->pd.DataFrame:
     df['release_month'] = release_month
     
     print("Generando dataset/popular_movies.csv")
-    df.to_csv(output_filename)
+    df.to_csv(output_filename, index=False)
     print("Limpieza concluida.")
     return df
